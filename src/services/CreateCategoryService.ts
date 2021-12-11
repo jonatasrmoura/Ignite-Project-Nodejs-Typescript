@@ -1,18 +1,12 @@
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import { IcategoriesRepository } from "../repositories/ICategoriesRepository";
 
 interface IRequest {
   name: string;
   description: string;
 }
 
-/**
- * [x] - Definir o tipo de retorno
- * [x] - Alterar o retorno de erro
- * [x] - Acessar o repositorio
- */
-
 class CreateCategoryService {
-  constructor(private categoriesRepository: CategoriesRepository) {
+  constructor(private categoriesRepository: IcategoriesRepository) {
 
   }
 
