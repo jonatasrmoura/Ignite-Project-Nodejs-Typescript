@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 import { CategoriesRepository } from '../repositories/CategoriesRepository';
 import { PostgresCategoriesRepository } from '../repositories/PostgresCategoriesRepository';
-import { CreateCategoryService } from '../services/CreateCategoryService';
+import { CreateCategoryService } from '../services/CreateCategory.service';
 
 const categoriesRoutes = Router();
 const categoriesRepository = new PostgresCategoriesRepository();
@@ -21,6 +21,6 @@ categoriesRoutes.get("/", (request, response) => {
   const all = categoriesRepository.list();
 
   return response.json(all);
-})
+});
 
 export { categoriesRoutes };
