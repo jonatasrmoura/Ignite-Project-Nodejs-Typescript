@@ -26,80 +26,80 @@ no banco de dados. São as regras que esperamos dos nossos requitos funcionais.
 
 **Requisitos funcionais**
 <br />
-Deve ser possível cadastrar um novo carro.
-Deve ser possível listar todas as categorias.
+Deve ser possível cadastrar um novo carro. <br />
+Deve ser possível listar todas as categorias. <br />
 
 **Requisitos não funcionais**
 <br />
-Utilizar UUID para gerar a Primary Key na tabela do banco de dados.
+Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 
 **Regra de negócio**
 <br />
-Não deve ser possível cadastrar um carro com uma placa já existente.
-Não deve ser possível alterar a placa de um carro já cadastrado.
-O carro deve ser cadastrado, por padrão, com disponibilidade.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+Não deve ser possível cadastrar um carro com uma placa já existente. <br />
+Não deve ser possível alterar a placa de um carro já cadastrado. <br />
+O carro deve ser cadastrado, por padrão, com disponibilidade. <br />
+O usuário responsável pelo cadastro deve ser um usuário administrador. <br />
 
 # Listagem de carros
 
 **Requisitos funcionais**
 <br />
-Deve ser possível listar todos os carros, disponíveis.
-Deve ser possível listar todos os carros, disponíveis e pelo nome da categoria.
-Deve ser possível listar todos os carros, disponíveis e pelo nome do carro.
-Deve ser possível listar todos os carros, disponíveis e pelo nome da marca.
+Deve ser possível listar todos os carros, disponíveis. <br />
+Deve ser possível listar todos os carros, disponíveis e pelo nome da categoria. <br />
+Deve ser possível listar todos os carros, disponíveis e pelo nome do carro. <br />
+Deve ser possível listar todos os carros, disponíveis e pelo nome da marca. <br />
 
 **Regra de negócio**
 <br />
-O usuário não precisa estar logado no sistema.
+O usuário não precisa estar logado no sistema. <br />
 
 # Cadastro de Especificação no carro
 
 **Requisitos funcionais**
 <br />
-Deve ser possível cadastrar uma especificação para um carro.
-Deve ser possível listar todas as especificações.
-Deve ser possível listar todos os carros, dessa especificação.
+Deve ser possível cadastrar uma especificação para um carro. <br />
+Deve ser possível listar todas as especificações. <br />
+Deve ser possível listar todos os carros, dessa especificação. <br />
 
 **Requisitos não funcionais**
 <br />
-Utilizar UUID para gerar a Primary Key na tabela do banco de dados.
+Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 
 **Regra de negócio**
 <br />
-Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
-Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+Não deve ser possível cadastrar uma especificação para um carro não cadastrado. <br />
+Não deve ser possível cadastrar uma especificação já existente para o mesmo carro. <br />
+O usuário responsável pelo cadastro deve ser um usuário administrador. <br />
 
 # Cadastro de imagens do carro
 
 **Requisitos funcionais**
 <br />
-Deve ser possível cadastrar a imagem do carro.
-Deve ser possível listar todos os carros.
+Deve ser possível cadastrar a imagem do carro. <br />
+Deve ser possível listar todos os carros. <br />
 
 **Requisitos não funcionais**
-Utilizar UUID para gerar a Primary Key na tabela do banco de dados.
-Utilizar o multer para upload dos arquivos.
+Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
+Utilizar o multer para upload dos arquivos. <br />
 
 **Regra de negócio**
 <br />
-A usuário deve cadastrar mais de uma imagem para o mesmo carro.
-O usuário responsável pelo cadastro deve ser um usuário administrador.
+A usuário deve cadastrar mais de uma imagem para o mesmo carro. <br />
+O usuário responsável pelo cadastro deve ser um usuário administrador. <br />
 
 # Aluguel de carro
 
 **Requisitos funcionais**
 <br />
-Deve ser possível cadastrar um aluguel.
-Deve ser possível listar todos os carros.
+Deve ser possível cadastrar um aluguel. <br />
+Deve ser possível listar todos os carros. <br />
 
 **Requisitos não funcionais**
 <br />
-Utilizar UUID para gerar a Primary Key na tabela do banco de dados.
+Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 
 **Regra de negócio**
 <br />
-O aluguel deve ter duração mínima de 24 hora.
-Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
-Não deve ser possível cadastrar um aluguel caso o carro esteja indisponível.
+O aluguel deve ter duração mínima de 24 hora. <br />
+Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário. <br />
+Não deve ser possível cadastrar um aluguel caso o carro esteja indisponível. <br />
