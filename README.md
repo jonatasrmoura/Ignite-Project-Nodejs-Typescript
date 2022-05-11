@@ -79,6 +79,7 @@ Deve ser possível cadastrar a imagem do carro. <br />
 Deve ser possível listar todos os carros. <br />
 
 **Requisitos não funcionais**
+<br />
 Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 Utilizar o multer para upload dos arquivos. <br />
 
