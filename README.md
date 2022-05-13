@@ -50,52 +50,43 @@ O usuário não precisa estar logado no sistema. <br />
 
 # Cadastro de Especificação no carro
 
-**Requisitos funcionais**
-<br />
+**Requisitos funcionais**<br />
 Deve ser possível cadastrar uma especificação para um carro. <br />
 Deve ser possível listar todas as especificações. <br />
 Deve ser possível listar todos os carros, dessa especificação. <br />
 
-**Requisitos não funcionais**
-<br />
+**Requisitos não funcionais**<br />
 Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 
-**Regra de negócio**
-<br />
+**Regra de negócio**<br />
 Não deve ser possível cadastrar uma especificação para um carro não cadastrado. <br />
 Não deve ser possível cadastrar uma especificação já existente para o mesmo carro. <br />
 O usuário responsável pelo cadastro deve ser um usuário administrador. <br />
 
 # Cadastro de imagens do carro
 
-**Requisitos funcionais**
-<br />
+**Requisitos funcionais**<br />
 Deve ser possível cadastrar a imagem do carro. <br />
 Deve ser possível listar todos os carros. <br />
 
-**Requisitos não funcionais**
-<br />
+**Requisitos não funcionais**<br />
 Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 Utilizar o multer para upload dos arquivos. <br />
 
-**Regra de negócio**
-<br />
+**Regra de negócio**<br />
 A usuário deve cadastrar mais de uma imagem para o mesmo carro. <br />
 O usuário responsável pelo cadastro deve ser um usuário administrador. <br />
 
 # Aluguel de carro
 
-**Requisitos funcionais**
-<br />
+**Requisitos funcionais**<br />
 Deve ser possível cadastrar um aluguel. <br />
 Deve ser possível listar todos os carros. <br />
 
-**Requisitos não funcionais**
-<br />
+**Requisitos não funcionais**<br />
 Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
 
-**Regra de negócio**
-<br />
+**Regra de negócio**<br />
 O aluguel deve ter duração mínima de 24 hora. <br />
 Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário. <br />
 Não deve ser possível cadastrar um aluguel caso o carro esteja indisponível. <br />
