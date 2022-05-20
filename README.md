@@ -52,8 +52,6 @@ O usuário não precisa estar logado no sistema. <br />
 
 **Requisitos funcionais**<br />
 Deve ser possível cadastrar uma especificação para um carro. <br />
-Deve ser possível listar todas as especificações. <br />
-Deve ser possível listar todos os carros, dessa especificação. <br />
 
 **Requisitos não funcionais**<br />
 Utilizar UUID para gerar a Primary Key na tabela do banco de dados. <br />
