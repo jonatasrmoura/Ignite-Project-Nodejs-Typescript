@@ -1,18 +1,28 @@
+// import "reflect-metadata";
+
 import { CreateCarSpecificationUseCase } from "./CreateCarSpecificationUseCase";
 import {
   CarsRepositoryInMemory
 } from "../../repositories/in-memory/CarsRepositoryInMemory";
+import {
+  SpecificationsRepositoryInMemory
+} from "@modules/cars/repositories/in-memory/SpecificationsRepositoryInMemory";
+
 import { AppError } from "@shared/errors/AppError";
 
-let carsRepositoryInMemory: CarsRepositoryInMemory;
 let createCarSpecificationUseCase: CreateCarSpecificationUseCase;
+let carsRepositoryInMemory: CarsRepositoryInMemory;
+let specificationsRepositoryInMemory: SpecificationsRepositoryInMemory;
 
 describe('Create Car Specification', () => {
 
   beforeEach(() => {
     carsRepositoryInMemory = new CarsRepositoryInMemory();
+    specificationsRepositoryInMemory = new SpecificationsRepositoryInMemory();
+
     createCarSpecificationUseCase = new CreateCarSpecificationUseCase(
-      carsRepositoryInMemory
+      carsRepositoryInMemory,
+      specificationsRepositoryInMemory
     );
   });
 
@@ -35,11 +45,18 @@ describe('Create Car Specification', () => {
       brand: "Brand",
       category_id: "category"
     });
-    const specifications_id = ["54321"];
 
-    await createCarSpecificationUseCase.execute({
-      car_id: car.id,
-      specifications_id,
+    const specification = await specificationsRepositoryInMemory.create({
+      name: 'Carro com 4 rodas e portas',
+      description: 'Eu já dizei que esse carro têm volante para o motorista?',
     });
+
+    const specificationCars = await createCarSpecificationUseCase.execute({
+      car_id: car.id,
+      specifications_id: [specification.id],
+    });
+
+    expect(specificationCars).toHaveProperty("specifications");
+    expect(specificationCars.specifications.length).toBe(1);
   });
 });
