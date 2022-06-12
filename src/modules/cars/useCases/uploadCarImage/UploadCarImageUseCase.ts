@@ -1,7 +1,0 @@
-
-
-class UploadCarImageUseCase {
-  async execute() {
-    
-  }
-}

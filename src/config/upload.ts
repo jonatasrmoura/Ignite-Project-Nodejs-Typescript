@@ -3,7 +3,6 @@ import { resolve } from 'path';
 import crypto from 'crypto';
 
 export default {
-
   upload(folter: string) {
     return {
       storage: multer.diskStorage({
