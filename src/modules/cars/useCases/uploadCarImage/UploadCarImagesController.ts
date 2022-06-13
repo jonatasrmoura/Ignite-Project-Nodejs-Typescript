@@ -12,11 +12,6 @@ class UploadCarImagesController {
     const { id } = request.params;
     const images = request.files as IFiles[];
 
-    console.log({
-      images,
-      id
-    })
-
     const uploadCarImagesUseCase = container.resolve(UploadCarImagesUseCase);
 
     const images_name = images.map((file) => file.filename);
